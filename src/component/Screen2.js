@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, StyleSheet,Pressable } from "react-native";
-
+import Screen3 from '../component/Screen3'
 function Home({ route }) {
   const { name } = route.params;
   const [data, setData] = useState([]);
@@ -26,7 +26,9 @@ function Home({ route }) {
         </View>
       ))}
       <View style={{alighContent:'center',alignItem:'center',justifiContent:'center'}}>
-      <Pressable style={{borderRadius:50,height:50,weight:20,backgroundColor:'blue'}}>
+      <Pressable 
+      onPress={()=>navigation.navigate('Screen3')}
+      style={{borderRadius:50,height:50,weight:20,backgroundColor:'blue'}}>
         <View style={{marginLeft:200}}>
         <Text style={{fontSize:50,color:'#fff'}}>+</Text>
         </View>
